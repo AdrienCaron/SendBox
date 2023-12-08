@@ -11,7 +11,7 @@ img {
 }
 
 .div2{
-    background-color: #535953;
+   
     height: 50px;
 }
 
@@ -38,17 +38,17 @@ ul{
 }
 
 .jul{
-    width: 115px;
-    height: 115px;
+    width: 100px;
+    height: 100px;
     object-fit: cover;
-    border-radius: 125px;
+    border-radius: 100px;
     position: absolute;
     top : 50%;
     left: 50%;
     transform: translate(-50%,-50%);
 }
 .disque{
-    background-color: #C5C5A9;
+    
     position: relative;
     display: inline-block;
     animation: turn 2s infinite linear;
