@@ -1,33 +1,65 @@
-console.log("Hello les SN")
+console.log("Hello Saint Jo");
 
-const prenom = 'Adrien';//bloque les modification
-let year = 2024; //possible de modifier
-const dob = 2003 //ne plus utilser
-const isAdmin = false // Bollean
-const apprenant = ["Adrien, Bastien, Tom"];
-const sac = {livre : 'BD tchoupi', trousse:'stylo', skills: ["basket"]} //objet
-console.log(apprenant);
-console.log(sac.skills);
+const prenom = 'Loïc'; // string
+let year = 2024; // int
+const dob = 2003; //ne plus utiliser
+const isAdmin = false; //Boolean
+const apprenants = ["Enzo", "Thomas", "Valentin"];  // tableau
+const sac = {livre: 'BD Tintin', trousse: 'stylo', skills: ["Bagarre", "Jeux Vidéos"] } // objet
+const disque = document.querySelector(".disque");
+const boutton = document.getElementById("boutton");
+const paragraphe = document.querySelector(".div1 p");
 
-apprenant.forEach(
-   prenom=>{
-        console.log(`Bonjour ${apprenant}`)
-    });
+setTimeout(() => {
+    paragraphe.style.backgroundColor = "white";
+}, 4000);
 
+boutton.addEventListener("click", ()=> {
+    disque.classList.toggle("pause");
 
-console.log(`Bonjour ${prenom}`);
-
-//nouvellle fonction => arrow function
-const calculeAge2 = ()=>{
-    const age = year - dob 
-    console.log(`Tu as : ${age} ans. `);
-    /*if(age > 18){
-        console.log("Tu peux rentrer")
+    if (disque.classList.contains("pause")){
+        boutton.textContent = "Play";
     }else{
-        console.log("Dehors ")
-    }*/
-    
+        boutton.textContent = "Pause";
+    }
+});
 
-    age > 18 ? console.log("Tu peux rentrer") : console.log("Dehors ")
+console.log(disque);
+
+console.log(apprenants[2]);
+console.log(sac.skills[0]);
+
+apprenants.forEach(  // Boucle sur le tableau
+    prenom => {
+        console.log(`Bonjour ${prenom}`)
+    }
+)
+
+
+console.log(`Bonjour ${prenom}`); //concatenation
+// calculeAge();
+
+
+// fonction à l'ancienne
+function calculeAge(){
+    const age = year - dob;
+    console.log(`Voici ton âge : ${age} ans.`); 
 }
+
+// nouvelle fonction => arrow function
+const calculeAge2 = ()=>{
+    const age = year - dob;
+
+    console.log(`Voici ton âge : ${age} ans.`); 
+
+    // if(age > 18){
+    //     console.log("Rentre bonhomme.")
+    // }else{
+    //     console.log("Dehors mauviette.")
+    // }
+
+    age > 18 ? console.log("Rentre bonhomme.") : console.log("Dehors mauviette.") // Condition terniaire
+}
+
+
 calculeAge2();

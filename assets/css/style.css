@@ -53,3 +53,6 @@ ul{
     display: inline-block;
     animation: turn 2s infinite linear;
 }
+.pause{
+    animation-play-state: paused;
+}
